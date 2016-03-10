@@ -1,0 +1,6 @@
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\bin\GamePractical.dll.config
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\bin\GamePractical.dll
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\bin\GamePractical.pdb
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\obj\Debug\GamePractical.csprojResolveAssemblyReference.cache
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\obj\Debug\GamePractical.dll
+C:\Users\Mehmet Alper Duran\Desktop\Mobile\GamePractical\GamePractical\obj\Debug\GamePractical.pdb
