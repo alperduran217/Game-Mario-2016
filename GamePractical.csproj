@@ -23,13 +23,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="Model\GameObjects.js" />
     <Content Include="phaser.js" />
     <Content Include="Pictures\bg.png" />
     <Content Include="Pictures\mario.png" />
     <Content Include="Screens\ScreenManager.js" />
+    <Content Include="Sprites\MarioSprite_.png" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Sprites\MarioSprite_.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

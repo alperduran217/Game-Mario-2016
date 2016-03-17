@@ -1,44 +1,52 @@
 ﻿var showLogs = true;
-var keys;
-var character;
 if (showLogs) {
-    console.log("ScreenManager");
+    console.log("Inside ScreenManager");
 }
 var gameWidth = 800;
 var gameHeight = 450;
 var backgroundColor = "#000000";
-var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'KulturGameDev', {
-    preload: preload, create: create, update: update });
+var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'KulturGameDev', { preload: preload, create: create, update: update });
+var keys;
+
+var PlayerCharacter;
+
 function preload() {
     if (showLogs) {
-        console.log("ScreenManager ­ preload");
+        console.log("ScreenManager - preload");
     }
-    game.load.image('background', 'Pictures/bg.png');    game.load.image('mario', 'Pictures/mario.png');   
+    game.load.image('background', 'Pictures/bg.png');
+
+    game.load.atlas('mario_walking', 'Sprites/MarioSprite_.png', 'Sprites/MarioSprite_.json', Phaser.Loader.TEXTURE_ATLAS_JSON_ARRAY);
 }
+
 function create() {
     if (showLogs)
-        console.log("ScreenManager ­create");
+        console.log("ScreenManager - create");
     var Background = game.add.sprite(game.world.centerX, game.world.centerY, 'background');
-    Background.anchor.setTo(0.5, 0.5);    character = game.add.image(0, 0, 'mario');    keys = game.input.keyboard.createCursorKeys();
+    Background.anchor.setTo(0.5, 0.5);
+
+    keys = game.input.keyboard.createCursorKeys();
+
+    PlayerCharacter = new GameObjects.Character();
+    PlayerCharacter.init("Mario");
+    console.log("name 5 " + PlayerCharacter.GetName());
+
 }
+
 function update() {
-    
-    if (keys.up.isDown) {
-        character.y--;
-        console.log("up");
+    if (keys.left.isDown) {
+        PlayerCharacter.MoveLeft();
     }
-  
-
-  else if (keys.down.isDown) {
-        character.y++;
-        console.log("down");
+    else if (keys.right.isDown) {
+        PlayerCharacter.MoveRight();
     }
-    if (keys.left.isDown) {        character.x--;
-        console.log("left");
-        
-    }    else if (keys.right.isDown) {
-        character.x++;
-        console.log("right");
+    else if (keys.up.isDown) {
+        PlayerCharacter.Jump();
+    }
+    else {
+        PlayerCharacter.Stand();
     }
 
 }
+
+
