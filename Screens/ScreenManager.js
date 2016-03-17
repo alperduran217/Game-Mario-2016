@@ -14,6 +14,7 @@ function preload() {
     if (showLogs) {
         console.log("ScreenManager - preload");
     }
+
     game.load.image('background', 'Pictures/bg.png');
 
     game.load.atlas('mario_walking', 'Sprites/MarioSprite_.png', 'Sprites/MarioSprite_.json', Phaser.Loader.TEXTURE_ATLAS_JSON_ARRAY);
